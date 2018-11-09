@@ -1,0 +1,120 @@
+.wrapper-color {
+  background: linear-gradient($flash-green, $green);
+  width: 100%;
+  position: absolute;
+  padding: 0px!important,
+}
+
+
+.big-header {
+    text-align: center;
+    margin: auto;
+
+
+  h1 {
+    overflow-wrap: break-word;
+    text-align: center;
+
+    font-size: 65px;;
+    background: -webkit-linear-gradient(45deg, $flash-green, $green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 30px;
+
+  }
+}
+
+.source-font {
+  font-family: "Source Sans Pro", "sans-serif";
+}
+
+.home-image {
+    margin-top: -5%;
+    text-align: center;
+  img {
+    height: 350px;
+    margin-top: -30px;
+    margin-right: 27px;
+  }
+}
+
+.container-gray {
+  background-color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 100px 20px rgba(56, 62, 65, 0.35), 25px 0px 200px rgba(255, 255, 255,0.1);
+  position: relative;
+}
+.banner {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+  height: calc(100vh - 120px);
+
+  .btn-yellow {
+    margin: auto;
+    margin-top: -50px;
+
+
+
+    &:hover a {
+      color: white;
+      font-weight: bolder;
+      text-decoration: none;
+      opacity: 1;
+    }
+  }
+}
+
+.banner {
+  a:hover {
+  text-decoration: none;
+  color: white;
+  }
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.03); }
+
+
+.presentation {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+    background-color: rgba(0,0,0,0.04);
+    margin-left: -15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+    .key-learning {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px;
+    }
+
+    .reminder {
+      flex: 0 0 30%;
+      text-align: center;
+      padding: 20px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      width: 300px;
+      height: 200px;
+      border-radius: 5%;
+      margin-left: 20px;
+    }
+}
+
+.in-banner {
+  width: 100px;
+      margin: auto;
+}

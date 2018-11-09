@@ -1,0 +1,47 @@
+<div class="container container-gray">
+  <div class="banner">
+    <div class="big-header">
+      <h1>NEVER SAY GOODBYE TO YOUR PLANTS AGAIN</h1>
+    </div>
+    <div class="home-image">
+      <%= image_tag "potify_cover.png" %>
+    </div>
+    <%= link_to "Start now", dashboard_path, class: "btn-yellow grow" %>
+  </div>
+  <div class="presentation">
+    <h2>PAMPER YOUR PLANTS !</h2>
+    <p class="source-font">With Potify, caring for your plants becomes fun !</p>
+    <div class="key-learning">
+      <div class="reminder">
+        <%= image_tag("cactus-family.png", height: 60) %>
+        Never forget to take care of your plants
+      </div>
+      <div class="reminder">
+        <%= image_tag("adoption.png", height: 50) %>
+        Need more information? We got it covered
+      </div>
+      <div class="reminder">
+        <%= image_tag("points_icon.png", height: 50) %>
+        Earn points when you complete your tasks
+      </div>
+    </div>
+  </div>
+  <div class="cards-content">
+    <div class="home-card-header">
+      <h2>OUR HAPPIEST POTS</h2>
+      <p class="source-font">Their masters know how to please them !</p>
+    </div>
+
+    <%= render "shared/home_cards", elements: @best_users %>
+
+  </div>
+  <!-- <div class="cards-content">
+    <h2>CURIOUS ABOUT PLANTS?</h2>
+    <p class="source-font">Find out more about indoor plants and find your next baby pot! </p>
+    <%#= render "shared/home_cards", elements: @plants %>
+    <%#= link_to "DISCOVER", plants_path, class: "navbar-potify-link btn btn-minimal in-banner" %>
+  </div> -->
+
+</div>
+
+<%= render "shared/footer" %>

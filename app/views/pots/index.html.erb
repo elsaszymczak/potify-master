@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <% @pots.each do |pot| %>
+      <div class="col-xs-12 col-md-4">
+        <%= link_to pot_path(pot) do %>
+          <%= render "shared/card", element: pot, select: false %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <%= render "shared/footer" %>
+</div>
+

@@ -1,0 +1,42 @@
+<% tasks.each do |task| %>
+  <div class="card-task" id="update-card">
+    <%= simple_form_for(task, remote: true) do |f| %>
+      <div class="card-item grow" data-points="<%= task.points %>" >
+        <%= f.submit :update, class: " hidden submit-task sweet-alert-demo" %>
+        <div class="avatar-date">
+          <% image = "" %>
+          <% task.pot.photo.nil? ? image = task.pot.plant.photo : image = task.pot.photo %>
+          <%= cl_image_tag(image, class: 'plant-avatar') %>
+          <% if (task.pot.late(task.name)) > 0 %>
+            <div class="late-date"><%= (task.pot.late(task.name)) %> <%= "day".pluralize(task.pot.late(task.name)) %> late</div>
+          <% end %>
+        </div>
+        <div class="task-message">
+          <% if task.name == "watering" %>
+            <p> You need to <%= task.action_name %> <span class='pot-name'><%= task.pot.name.capitalize %></span> with <span class='plant-quantity'><%= task.pot.plant.send("#{task.name}_quantity") %>cl</span><br></p>
+             <div class="tasks-badges-test">
+              <%=  image_tag "watering.png", size: 40, class: "icons" %>
+            </div>
+          <% elsif task.name == "fertilizing" %>
+            <p> <span class='pot-name'><%= task.pot.name.capitalize %></span> needs <span class='plant-quantity'><%= task.pot.plant.send("#{task.name}_quantity") %>cl</span> of fertilizer<br></p>
+            <div class="tasks-badges-test">
+              <%=  image_tag "fertilize.jpg", size: 40, class: "icons" %>
+            </div>
+          <% elsif task.name == "cutting" %>
+            <p> <span class='pot-name'><%= task.pot.name.capitalize %></span> needs <%= task.name %><br> </p>
+            <div class="tasks-badges-test">
+              <%=  image_tag "plants.png", size: 40, class: "icons" %>
+            </div>
+          <% elsif task.name == "potting" %>
+            <p> <span class='pot-name'><%= task.pot.name.capitalize %></span> needs <%= task.name %><br> </p>
+            <div class="tasks-badges-test">
+              <%=  image_tag "potting.jpg", size: 40, class: "icons" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+

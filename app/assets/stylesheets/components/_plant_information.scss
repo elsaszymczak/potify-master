@@ -1,0 +1,43 @@
+
+.task-information {
+  flex: 0 0 50%;
+  height: 70px;
+
+  h4 {
+    font-size: 18px;
+  }
+
+  p{
+    font-size: 18px;
+  }
+
+  span {
+  padding: 0px;
+  font-size: 18px;
+  }
+}
+
+.plant-details {
+      display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bold-green {
+  font-weight: bold;
+  color: $green;
+  font-size: 25px;
+}
+
+.plant_info {
+  margin-bottom: 20px;
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+p.about_the_plant {
+  border-radius: 10px;
+    font-size: 18px;
+    font-weight: lighter;
+}

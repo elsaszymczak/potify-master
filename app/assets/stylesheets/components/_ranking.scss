@@ -1,0 +1,89 @@
+.message {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-bottom: 1px solid rgba(220,224,244,0.6);
+  text-align: center;
+
+  p {
+    margin-top: 12.5px;
+  }
+}
+
+.message.current-user .message-status p.price {
+  color: #15E9A6;
+}
+.message:last-child {
+  border-bottom: none;
+}
+.message-name {
+  padding-left: 10px;
+  min-width: 100px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// .message-name h3 {
+//   font-size: 13px;
+//   margin-bottom: 0px;
+// }
+.message-name p {
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 30px;
+  flex: 0 0 60%;
+}
+// .message-body {
+//   padding-left: 10px;
+//   font-size: 15px;
+//   color: fgba(0, 0, 0, 0.6);
+// }
+
+.message-name-title {
+  margin-left: 80px;
+}
+
+.center {
+  text-align: center;
+}
+
+.message-body {
+  flex: 0 0 20%;
+  font-size: 15px;
+}
+
+.point-font {
+  font-size: 20px;
+}
+.message-body strong{
+  color: rgba(0,0,0,0.6);
+}
+.message-body p {
+}
+.message-status {
+  font-size: 15px;
+  font-weight: bold;
+  flex: 0 0 15%;
+
+}
+.status.accepted {
+  color: #04A366;
+}
+.status.declined {
+  color: red;
+}
+.status.pending {
+  color: rgba(0, 0, 0, 0.6);
+}
+.avatar-large {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+.price {
+  font-weight: bolder;
+  font-size: 28px;
+  margin-left: 11px;
+}

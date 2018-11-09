@@ -1,0 +1,31 @@
+<div>
+  <div class="message">
+    <div class="message-status">
+      <p><strong>RANK</strong></p>
+    </div>
+
+    <div class="message-name center" id="message-name-title">
+      <p><strong>USER</strong></p>
+    </div>
+    <div class="message-body">
+      <p><strong>PUNTOS</strong></p>
+    </div>
+  </div>
+  <% i = 0 %>
+  <% @users.order(points: :desc).first(10).each do |user| %>
+    <% photo = user.photo unless user.photo.nil? %>
+    <div class="message<%= " current-user" if user == current_user %>">
+      <div class="message-status">
+        <p class="price"><%= (i += 1) %></p>
+      </div>
+      <div class="message-name">
+        <%= cl_image_tag(user.photo, class: "avatar-large") %>
+        <p><%= user.first_name %></p>
+      </div>
+      <div class="message-body point-font">
+        <p><strong><%= user.points %></strong></p>
+      </div>
+    </div>
+
+  <% end %>
+</div>

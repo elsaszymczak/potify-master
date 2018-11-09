@@ -1,0 +1,235 @@
+.form-control {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: solid;
+  box-shadow: none;
+}
+
+.form-pots {
+  background: white;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+
+  h3 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexbutton {
+  display: flex;
+  justify-content: center;
+
+}
+
+.btn {
+  justify-content: center;
+  padding: 8px 15px;
+}
+
+.select-size {
+  flex-grow: 1;
+  padding: 7px 20px;
+  margin: 10px 0 30px 0;
+  border: 1px solid;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: $light-gray;
+  color: $gray;
+  text-align: center;
+  border: none;
+  box-shadow: 0 18px 35px rgba(50, 50, 93, 0.02), 0 8px 15px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    background-color: $green;
+    color: white;
+  }
+
+  &:hover .fa-leaf{
+    color: white;
+  }
+
+  &.active {
+    background-color: $green;
+    color: white;
+  }
+
+  &.active .fa-leaf {
+    color: white;
+  }
+
+  #small-leaf {
+    font-size: 10px;
+  }
+
+  #medium-leaf {
+    font-size: 15px;
+  }
+
+  #large-leaf {
+    font-size: 20px;
+  }
+}
+
+input {
+  width: 100%;
+}
+
+label {
+  width: 100%;
+  cursor: pointer;
+}
+
+
+// .selected-plant {
+//   transition: all .2s ease-in-out;
+//   &.active {
+//     transform: scale(1.1);
+
+//   }
+
+// }
+
+.plant-choice-image {
+  cursor: pointer;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+
+  img {
+    height: 200px;
+    // opacity: 0.2;
+    transition: opacity .4s ease-in-out;
+    transition: transform .2s, -webkit-transform .2s;
+    border-radius: 4px;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+  }
+}
+
+img.image-preview {
+  width: 100%;
+  border-radius: 5px;
+  width: 95%;
+}
+
+textarea {
+  resize: none;
+}
+
+.plant-choice-image span {
+  padding-left: 20px;
+}
+
+// login-form
+
+label {
+  text-transform: capitalize;
+  // text-align: center;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  a {
+    text-decoration: none;
+    color: black;
+
+  }
+}
+
+.plant-upload-image {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+
+  &:hover a {
+    color: white;
+  }
+}
+
+abbr[title="required"] {
+  display: none;
+}
+
+
+// Modal part
+
+.modal-body {
+  position: relative;
+  padding: 15px;
+  margin: 0px 20px 0px 10px;
+
+  h3 {
+    text-align: center;
+  }
+}
+
+.modal-header {
+  padding: 0px;
+  border-bottom: none;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 67px rgba(21, 233, 166, 0.3);
+  background-clip: padding-box;
+  outline: 0;
+}
+
+#div_plant_name {
+background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.71) 0%, rgba(48, 51, 27, 0.72) 51%), url(http://res.cloudinary.com/dw7qm2y6i/image/upload/v1528304377/b37kfylwopi53im8yb7f.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  border-radius: 5px;
+  opacity: 0.85;
+  font-size: 25px;
+  width: 95%;
+
+
+  &:hover {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+.form-control:focus {
+  border-color: $green;
+  outline: none;
+  box-shadow: none;
+}
+
+#upload-fake-btn {
+  margin-bottom: 20px;
+}
